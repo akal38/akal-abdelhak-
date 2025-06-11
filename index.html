@@ -23,6 +23,29 @@
       100% {background-position: 0% 50%;}
     }
 
+    @keyframes neon-border {
+      0% {
+        box-shadow: 0 0 15px #ff0080, 0 0 30px #ff0080;
+        border-color: #ff0080;
+      }
+      25% {
+        box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
+        border-color: #00ffff;
+      }
+      50% {
+        box-shadow: 0 0 15px #39ff14, 0 0 30px #39ff14;
+        border-color: #39ff14;
+      }
+      75% {
+        box-shadow: 0 0 15px #ffae00, 0 0 30px #ffae00;
+        border-color: #ffae00;
+      }
+      100% {
+        box-shadow: 0 0 15px #ff0080, 0 0 30px #ff0080;
+        border-color: #ff0080;
+      }
+    }
+
     .container {
       max-width: 600px;
       margin: 50px auto;
@@ -39,13 +62,14 @@
     }
 
     .product-img {
-      display: block; /* ✅ عرض الصورة مباشرة */
+      display: block;
       width: 100%;
       max-height: 400px;
       object-fit: cover;
       border-radius: 10px;
       margin-bottom: 20px;
       border: 3px solid #00e0ff;
+      animation: neon-border 6s linear infinite;
     }
 
     label {
@@ -81,7 +105,7 @@
     <h2>💎 عطر رجالي فاخر 💎</h2>
 
     <!-- ✅ عرض الصورة مباشرة -->
-    <img src="images/hatem-boukhit-ALd9CEDrRdY-unsplash.jpg" alt="عطر" id="productImage" class="product-img">
+    <img src="hatem-boukhit-ALd9CEDrRdY-unsplash.jpg" alt="عطر" id="productImage" class="product-img">
 
     <p class="mt-3">عطر يدوم طويلاً برائحة جذابة، متوفر الآن بسعر 2500 دج فقط!</p>
 
@@ -102,7 +126,6 @@
         <label>الولاية</label>
         <select name="wilaya" class="form-control" required>
           <option value="">اختر ولايتك</option>
-          <!-- جميع الخيارات كما هي -->
           <option>أدرار</option>
           <option>الشلف</option>
           <option>الأغواط</option>
